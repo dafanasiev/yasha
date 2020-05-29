@@ -11,6 +11,7 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+pytest-forked = "*"
 
 [packages]
 jinja2 = "*"
