@@ -202,7 +202,7 @@ def test_broken_extensions_name_error(tmpdir, callYasha):
 
 
 def test_render_template_from_stdin_to_stdout(src_dir):
-    cmd = r'echo -n "{{ foo }}" | pipenv run python3 -m yasha --foo=bar -'
+    cmd = r'echo -n "{{ foo }}" | python3 -m yasha --foo=bar -'
     out = check_output(cmd, shell=True, cwd=src_dir)
     assert out == b'bar'
 
@@ -220,7 +220,7 @@ def test_json_template(tmpdir, callYasha):
 
 def test_mode_is_none(src_dir):
     """gh-42, and gh-44"""
-    cmd = r'echo -n "{{ foo }}" | pipenv run python3 -m yasha -'
+    cmd = r'echo -n "{{ foo }}" | python3 -m yasha -'
     out = check_output(cmd, shell=True, cwd=src_dir)
     assert out == b''
 
@@ -229,7 +229,7 @@ def test_mode_is_pedantic(src_dir):
     """gh-42, and gh-48"""
     import os
     with pytest.raises(subprocess.CalledProcessError) as err:
-        cmd = r'echo -n "{{ foo }}" | pipenv run python3 -m yasha --mode=pedantic -'
+        cmd = r'echo -n "{{ foo }}" | python3 -m yasha --mode=pedantic -'
         out = check_output(cmd, shell=True, stderr=subprocess.STDOUT, cwd=src_dir)
     out = err.value.output
     assert out == b"Error: Variable 'foo' is undefined\n"
@@ -237,7 +237,7 @@ def test_mode_is_pedantic(src_dir):
 
 def test_mode_is_debug(src_dir):
     """gh-44"""
-    cmd = r'echo -n "{{ foo }}" | pipenv run python3 -m yasha --mode=debug -'
+    cmd = r'echo -n "{{ foo }}" | python3 -m yasha --mode=debug -'
     out = check_output(cmd, shell=True, cwd=src_dir)
     assert out == b'{{ foo }}'
 
