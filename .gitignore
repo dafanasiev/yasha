@@ -1,0 +1,23 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Distribution and packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+
+# Unit test and coverage reports
+.cache/
+.pytest_cache/
+
+
+# Environments
+env/
+venv/
+.env/
+.venv/
