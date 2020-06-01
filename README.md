@@ -1,7 +1,7 @@
 # Yasha
-[![Build Status](https://travis-ci.org/kblomqvist/yasha.svg?branch=master)](https://travis-ci.org/kblomqvist/yasha)
+[![Build Status](https://travis-ci.org/dafanasiev/yasha.svg?branch=master)](https://travis-ci.org/dafanasiev/yasha)
 ![MIT license](https://img.shields.io/pypi/l/yasha.svg)
-<img src="https://raw.githubusercontent.com/kblomqvist/yasha/master/yasha.png" align="right" />
+<img src="https://raw.githubusercontent.com/dafanasiev/yasha/master/yasha.png" align="right" />
 
 Yasha is a code generator based on [Jinja2](http://jinja.pocoo.org/) template engine. At its simplest, a command-line call
 
@@ -11,7 +11,7 @@ yasha -v variables.yaml template.txt.j2
 
 will render `template.txt.j2` into a new file named as `template.txt`. See how the created file name is derived from the template name. The template itself remains unchanged.
 
-The tool was originally written to generate code for the zinc.rs' [I/O register interface](http://zinc.rs/apidocs/ioreg/index.html) from the [CMSIS-SVD](https://www.keil.com/pack/doc/CMSIS/SVD/html/index.html) description file, and was used to interface with [the peripherals of Nordic nRF51](https://github.com/kblomqvist/yasha/tree/master/tests/fixtures) ARM Cortex-M processor-based microcontroller. Yasha has since evolved to be flexible enough to be used in any project where the code generation is needed. The tool allows extending Jinja by domain specific filters, tests and extensions, and it operates smoothly with the commonly used build automation software like Make, CMake and SCons.
+The tool was originally written to generate code for the zinc.rs' [I/O register interface](http://zinc.rs/apidocs/ioreg/index.html) from the [CMSIS-SVD](https://www.keil.com/pack/doc/CMSIS/SVD/html/index.html) description file, and was used to interface with [the peripherals of Nordic nRF51](https://github.com/dafanasiev/yasha/tree/master/tests/fixtures) ARM Cortex-M processor-based microcontroller. Yasha has since evolved to be flexible enough to be used in any project where the code generation is needed. The tool allows extending Jinja by domain specific filters, tests and extensions, and it operates smoothly with the commonly used build automation software like Make, CMake and SCons.
 
 ## Installation
 
@@ -24,13 +24,13 @@ pip install yasha
 or if you like to get the latest development version:
 
 ```bash
-pip install git+https://github.com/kblomqvist/yasha.git
+pip install git+https://github.com/dafanasiev/yasha.git
 ```
 
 or if you would like to take part into the development process:
 
 ```bash
-git clone https://github.com/kblomqvist/yasha.git
+git clone https://github.com/dafanasiev/yasha.git
 pip install -e yasha
 ```
 
@@ -314,7 +314,7 @@ os:
   version: 9.1
 ```
 
-Requires: *Python >= 3.5*  
+Requires: *Python >= 3.5*
 Params: *strip=True, check=True, timeout=2*
 
 ### subprocess
@@ -336,7 +336,7 @@ Allows to spawn new processes, but unlike `shell` behaves like Python's standard
 platform: Linux
 ```
 
-Requires: *Python >= 3.5*  
+Requires: *Python >= 3.5*
 Params: *stdout=True, stderr=True, check=True, timeout=2*
 
 ## Tips and tricks

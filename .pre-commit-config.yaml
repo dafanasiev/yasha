@@ -1,0 +1,16 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.1.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: "pipenv-setup sync"
+        name: 'pipenv-setup sync'
+        entry: run-pipenv-setup-sync.sh
+        files: '\.Pipfile.lock$'
+        language: 'script'
+        description: "Runs pipenv-setup sync`"
