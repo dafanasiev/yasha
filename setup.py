@@ -137,6 +137,12 @@ setup(
         "pyyaml==5.3.1",
         "xmltodict==0.12.0",
     ],  # Optional
+
+    entry_points='''
+        [console_scripts]
+        yasha=yasha.cli:cli
+    ''',
+
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
     # syntax, for example:
